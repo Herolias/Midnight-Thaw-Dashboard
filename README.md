@@ -2,7 +2,6 @@
 
 A local web dashboard to track your **Midnight (NIGHT)** token thaw schedules and claimable amounts across multiple wallets.
 
-![Node](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen.svg)
 
 ## Features
 
@@ -17,7 +16,7 @@ A local web dashboard to track your **Midnight (NIGHT)** token thaw schedules an
 ### One-Click Start (Alternative)
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/YOUR_USERNAME/midnight-thaw-tracker.git
+   git clone https://github.com/Herolias/Midnight-Thaw-Dashboard.git
    cd midnight-thaw-tracker
    ```
 
@@ -35,7 +34,7 @@ A local web dashboard to track your **Midnight (NIGHT)** token thaw schedules an
 
 2. **Clone the repository**
    ```bash
-   git clone https://github.com/YOUR_USERNAME/midnight-thaw-tracker.git
+   git clone https://github.com/Herolias/Midnight-Thaw-Dashboard.git
    cd midnight-thaw-tracker
    ```
 
