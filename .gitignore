@@ -1,0 +1,20 @@
+# Dependencies
+node_modules/
+
+# User configuration (contains personal wallet addresses)
+config.json
+
+# Cache files
+temp_schedule.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*

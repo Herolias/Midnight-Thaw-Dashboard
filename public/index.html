@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midnight Thaw Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="background-globes">
+        <div class="globe globe-1"></div>
+        <div class="globe globe-2"></div>
+    </div>
+
+    <div class="app-container">
+        <header>
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-moon"></i>
+                </div>
+                <h1>Midnight Tracker</h1>
+            </div>
+            <div class="connection-status">
+                <span class="status-dot"></span> Mainnet
+            </div>
+        </header>
+
+        <main>
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <div class="hero-card glass-panel" style="flex-direction: column; align-items: stretch;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                        <div class="hero-content">
+                            <span class="hero-label">Total Allocation</span>
+                            <div style="display: flex; align-items: baseline; gap: 1rem; margin-bottom: 1.5rem;">
+                                <h2 id="global-total-allocation" class="hero-value" style="margin: 0;">Loading...</h2>
+                                <div id="price-display" class="price-badge hidden">
+                                    <span id="token-price" class="price-value">...</span>
+                                    <span id="price-change" class="price-change">...</span>
+                                    <div class="divider" style="height: 15px; margin: 0 0.5rem;"></div>
+                                    <button id="currency-toggle" class="currency-btn"
+                                        title="Switch Currency">EUR</button>
+                                </div>
+                            </div>
+
+                            <div class="hero-substats">
+                                <div class="substat" id="unlocked-substat" style="position: relative; cursor: help;">
+                                    <span class="label">Redeemable <i class="fa-solid fa-circle-info"
+                                            style="font-size: 0.7em; opacity: 0.5;"></i></span>
+                                    <span class="value success-text" id="global-unlocked">...</span>
+                                    <!-- Tooltip Container -->
+                                    <div id="unlocked-tooltip" class="custom-tooltip hidden">
+                                        <!-- Dynamic Content -->
+                                    </div>
+                                </div>
+                                <div class="divider"></div>
+                                <div class="substat">
+                                    <span class="label">Redeemed</span>
+                                    <span class="value redeemed-text" id="global-redeemed">...</span>
+                                </div>
+                                <div class="divider"></div>
+                                <div class="substat">
+                                    <span class="label">Locked</span>
+                                    <span class="value muted-text" id="global-locked">...</span>
+                                </div>
+                                <div class="divider"></div>
+                                <div class="substat">
+                                    <span class="label">Next Unlock</span>
+                                    <span class="value highlight-text" id="global-next-unlock">...</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hero-icon"
+                            style="position: relative; right: auto; bottom: auto; transform: none; font-size: 4rem;">
+                            <i class="fa-solid fa-chart-simple"></i>
+                        </div>
+                    </div>
+
+                    <div class="chart-container"
+                        style="flex: 1; min-height: 250px; margin-top: 2rem; border-top: 1px solid var(--glass-border); padding-top: 1rem; position: relative;">
+                        <button id="chart-back-btn" class="btn-secondary hidden"
+                            style="position: absolute; top: 0; right: 0; z-index: 10; padding: 0.25rem 0.75rem; font-size: 0.8rem;">
+                            <i class="fa-solid fa-arrow-left"></i> Back to Months
+                        </button>
+                        <canvas id="unlocksChart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Actions -->
+            <section class="actions-section">
+                <div class="search-bar glass-panel">
+                    <div class="search-group" style="flex: 2;">
+                        <i class="fa-solid fa-wallet search-icon"></i>
+                        <input type="text" id="address-input" placeholder="Paste Cardano Address here...">
+                    </div>
+                    <div class="search-group" style="flex: 1; border-left: 1px solid var(--glass-border);">
+                        <i class="fa-solid fa-tag search-icon"></i>
+                        <input type="text" id="name-input" placeholder="Name (Optional)">
+                    </div>
+                    <button id="lookup-btn" class="btn-primary">Check</button>
+                    <button id="add-btn" class="btn-secondary" title="Add to Watchlist"><i
+                            class="fa-solid fa-plus"></i></button>
+                </div>
+            </section>
+
+            <!-- Results Area -->
+            <div id="lookup-result" class="result-area hidden">
+                <!-- Dynamic Content -->
+            </div>
+
+            <!-- Watchlist -->
+            <section class="watchlist-section">
+                <div class="section-header">
+                    <h2><i class="fa-solid fa-list"></i> Monitored Wallets</h2>
+                    <span id="wallet-count" class="badge">0</span>
+                </div>
+                <div id="watchlist-container" class="grid-container">
+                    <!-- Dynamic Content -->
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
