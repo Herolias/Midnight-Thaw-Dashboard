@@ -1,48 +1,57 @@
 # Midnight Thaw Tracker
 
-A beautiful, local web dashboard to track your **Midnight (NIGHT)** token thaw schedules and claimable amounts across multiple wallets.
+A local web dashboard to track your **Midnight (NIGHT)** token thaw schedules and claimable amounts across multiple wallets.
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Node](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen.svg)
 
 ## Features
 
-- **Visual Dashboard** - Track unlocking schedules with interactive charts
+- **Visual Dashboard** - Track unlocking schedules with an interactive chart
 - **Multi-Wallet Support** - Monitor multiple wallet addresses at once
 - **Live Price Data** - Real-time NIGHT token pricing from CoinGecko
 - **Custom Names** - Label your wallets for easy identification
-- **Thaw Timeline** - See exactly when tokens become redeemable vs. redeemed
+- **Detailed Thaw Information** - See exactly when tokens become redeemable for each wallet vs. how many are already redeemed
 
 ## Quick Start
 
-### Prerequisites
-
-- [Node.js](https://nodejs.org/) version 18 or higher
-
-### Installation
-
+### One-Click Start (Alternative)
 1. **Clone the repository**
    ```bash
    git clone https://github.com/YOUR_USERNAME/midnight-thaw-tracker.git
    cd midnight-thaw-tracker
    ```
 
-2. **Install dependencies**
+2. **Run the start script**
+- **Windows**: Double-click `start.bat`
+- **Linux/macOS**: Run `./start.sh` (you may need to `chmod +x start.sh` first)
+
+3. **Open your browser** to [http://localhost:3000](http://localhost:3000)
+
+### Manual Installation
+
+1. **Prerequisites**
+
+- [Node.js](https://nodejs.org/) version 18 or higher
+
+2. **Clone the repository**
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/midnight-thaw-tracker.git
+   cd midnight-thaw-tracker
+   ```
+
+3. **Install dependencies**
    ```bash
    npm install
    ```
 
-3. **Start the server**
+4. **Start the server**
    ```bash
    npm start
    ```
 
-4. **Open your browser** to [http://localhost:3000](http://localhost:3000)
+5. **Open your browser** to [http://localhost:3000](http://localhost:3000)
 
-### One-Click Start (Alternative)
 
-- **Windows**: Double-click `start.bat`
-- **Linux/macOS**: Run `./start.sh` (you may need to `chmod +x start.sh` first)
 
 ## Configuration
 
